@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'TIMMONS NY';
+    src: url('TIMMONSNY.woff2') format('woff2'),
+        url('TIMMONSNY.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
