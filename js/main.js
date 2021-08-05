@@ -6,6 +6,7 @@ var static = true;
     var scroll = new LocomotiveScroll({
         el: document.querySelector('#jsScroll'),
         smooth: true,
+        offset: [0, 120],
         getSpeed: true,
         getDirection: true,
         reloadOnContextChange:true,
@@ -65,5 +66,16 @@ var static = true;
         type: 'video'
      });
 
+ function openMobileDrawer() {
+    var drawer = document.getElementById('mobileDrawer');
+    drawer.classList.remove('is-closed');
+ }
+
+ function closeMobileDrawer() {
+    var drawer = document.getElementById('mobileDrawer');
+    drawer.classList.add('is-closed');
+ }
+    
+     
 
     
