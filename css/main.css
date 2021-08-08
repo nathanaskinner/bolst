@@ -440,12 +440,38 @@ h3, .h3 {
     padding-bottom: 75%;
 }
 
-@media (min-width: 768px) {
+.section--mission .background__ratio--small {
+    display: none;
+} 
+
+.section--mission .banner-overlay {
+    position: relative;
+} 
+
+@media only screen and (min-width: 48em) {
+
+    .section--mission .background__ratio--small {
+        display: block;
+    } 
+
+    .section--mission .banner-overlay {
+        position: absolute;
+    } 
+
     .background__ratio--banner {
         padding-bottom: 50%;
     }
     
-    .background__ratio--small {
+    .background__ratio--small,
+    .section--mission .background__ratio--small {
+        padding-bottom: 50%;
+    }
+}
+
+@media only screen and (min-width: 64em) {
+
+    .background__ratio--small,
+    .section--mission .background__ratio--small {
         padding-bottom: 33.333%;
     }
 }
@@ -487,7 +513,7 @@ img.background__content {
     position: absolute;
     top: 0;
     width: 100%;
-}
+}   
 
 .section {
     padding: 3rem 0;
@@ -552,6 +578,10 @@ img.background__content {
     .section .background--bottom {
         bottom: -6rem; 
     }
+
+    .section--mission .banner-overlay {
+        position: absolute;
+    } 
 }
 
 @media only screen and (min-width: 75em) {
