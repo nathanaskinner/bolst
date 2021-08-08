@@ -1353,6 +1353,12 @@ img.background__content {
     display: none !important;
 }
 
+
+.button-group a  {
+    margin-top: 1rem; 
+    display: block;
+   }
+
 @media only screen and (min-width: 32em) {
     .button-group {
         display: flex;
@@ -1365,13 +1371,6 @@ img.background__content {
         display: inline-block;
     }
 }
-
-.button-group a  {
- margin-top: 1rem; 
- display: block;
-}
-
-
 
 .link {
     color: var(--dark);
