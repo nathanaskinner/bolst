@@ -76,6 +76,58 @@ var static = true;
     drawer.classList.add('is-closed');
  }
     
-     
+ $( document ).ready(function() {
+    $('#modalLink').modaal({
+        custom_class: 'newsletter'
+    });
+    if(!Cookies.get('formSignedUp')){
+        setTimeout(function() { 
+            $('#modalLink').modaal('open');
+        }, 6000);
+    }
+    
+});
 
+$( document ).ready(function() {
+    $("#newsletterForm").submit(function(e) {
+        e.preventDefault(); // avoid to execute the actual submit of the form.
+        var form = $(this);
+        var url = form.attr('action');
+        var name = $('#newsletterName').val();
+        var email = $('#newsletterEmail').val();
+        var gotcha = $('#newsletterGotcha').val();
+        var submit = $('#newsletterSubmit');
+        var message = $('#newsletterMessage');
+        $.ajax({
+            url: url,
+            method: "POST",
+            dataType: "json",
+            data: {
+                name: name,
+                email: email,
+                _gotcha: gotcha
+            },
+            beforeSend: function() {
+                submit.text('Signing you up...');
+            },
+            success: function(data) {
+                setTimeout(function() { 
+                    form.addClass('is-hidden');
+                    message.removeClass('is-hidden');
+                    message.append('<div class="text-center text-large">Thank you for signing up!</div>');
+                }, 3000);
+                setTimeout(function() {
+                    $('#modalLink').modaal('close');
+                }, 6000);
+                Cookies.set('formSignedUp', true);
+            },
+            error: function(err) {
+                message.removeClass('is-hidden');
+                $contactForm.append('<div class="text-center text-large">Oops, there was an error.</div>');
+                submit.text('Sign up to download now');
+            }
+        });
+    });
+
+});
     

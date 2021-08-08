@@ -236,6 +236,13 @@ h3, .h3 {
     }
 }
 
+@media (min-width: 64em) {
+    .header {
+        height: 150px;
+        background-color: transparent;
+    }
+}
+
 
 
 .header.pinned {
@@ -578,7 +585,6 @@ img.background__content {
 }
 
 .form-control--input input, .form-control--select select, .form-control--textarea textarea {
-    text-transform: uppercase;
     font-size: 1.2rem;
     line-height: 1.33333em;
     line-height: normal;
@@ -932,6 +938,15 @@ img.background__content {
     max-width: 680px;
 }
 
+.box--large {
+    max-width: 780px;
+}
+
+.newsletter .modaal-container {
+    max-width: 640px;
+    background-color: var(--sand);
+}
+
 @media only screen and (min-width: 64em) {
 
     .section--rl, .section--lr {
@@ -1081,6 +1096,9 @@ img.background__content {
 @media only screen and (min-width: 64em) {
     .section, .section--rl, .section--lr {
         padding: 6rem 0;
+    }
+    .section:first-of-type {
+        padding-top: 150px;
     }
 }
 /* lg */
@@ -1266,3 +1284,6 @@ img.background__content {
 }
 
 
+.is-hidden {
+    display: none !important;
+}

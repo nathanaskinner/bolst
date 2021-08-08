@@ -98,9 +98,9 @@
                         </div>
                         <div class="col col-xs-12 col-sm-6"  data-scroll data-scroll-speed="-2" data-scroll-delay="0.6">
                             <div class="box prose" data-scroll  data-scroll-offset="200">
-                                <h1 class="display mt-4 mt-md-0">Make Home Happen.</h1>
-                                <a class="button button--arrow mt-2" href="#">Let's Get Started</a>
-                                <p class="offset text-large">We are the only real estate broker that is in the business to elevate life and advance communities</p>
+                                <h1 class="display mt-4 mt-md-0">Housing for everyone.</h1>
+                               <!--<a class="button button--arrow mt-2" href="#">Let's Get Started</a>-->
+                                <p class="offset text-large">We are the only real estate broker that is in the business to elevate life and advance communities.</p>
                             </div>
                         </div>
                     </div>
@@ -161,10 +161,10 @@
                 <div class="banner-overlay">
                     <div class="container">
                         <div class="row">
-                            <div class="col col-xs-12 col-sm-7 text-center" data-scroll data-scroll-speed="2">
-                                <div class="box">
-                                <h2 class="">Mission Excepteur sint occaecat cupidatat</h2>
-                                <p>Diam vel quam elementum pulvinar etiam. Condimentum vitae sapien pellentesque habitant. At varius vel pharetra vel. Amet dictum sit amet justo. Nunc vel risus commodo viverra maecenas accumsan lacus. Donec pretium vulputate sapien nec sagittis aliquam malesuada bibendum arcu. </p>
+                            <div class="col col-xs-12 col-sm-8 text-center" data-scroll data-scroll-speed="2">
+                                <div class="box box--large">
+                                <h2 class="">We’re here to help you unlock opportunity.</h2>
+                                <p>Our people-first approach puts the emphasis on you as a human as well as an agent. Bolst is invested in empowering agents to grow successful and fulfilling careers built on our collective vision of a brighter future. Go beyond your potential with a shared revenue structure that helps you achieve a sustainable work-life balance while having a positive impact on the communities in which you work. What will your legacy be? Unlock your opportunity to succeed with integrity and excellence with Bolst.</p>
                                 </div>
                             </div>
                         </div>
@@ -183,8 +183,9 @@
                         <div class="col col-xs-12 col-sm-6 right" data-scroll data-scroll-speed="-2" data-scroll-delay="0.6">
                             <div class="box box--center prose" data-scroll  data-scroll-offset="200">
                                 <h2 class="display mt-4 mt-md-0">Make Home Happen.</h2>
-                                <a class="button button--arrow mt-2" href="#">Let's Get Started</a>
-                                <p class="mt-5">We are the only real estate broker that is in the business to elevate life and advance communities</p>
+                                <!--<a class="button button--arrow mt-2" href="#">Let's Get Started</a>-->
+                                <p class="mt-5">We believe everyone deserves a place to call home, and we work to make home happen for everyone. With decades of experience in the industry, we’ve learned that meaningful relationships are built with a generosity of spirit in listening and understanding. We are committed to providing best-in-class service while forging the path forward to a greater future in a continuously shifting industry. 
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -194,7 +195,7 @@
                 <div class="container">
                     <div class="row bottom-xs">
                         <div class="col col-xs-12 video__title-col" data-scroll data-scroll-speed="1" data-scroll-repeat>
-                            <h2 class="display video__title" data-scroll data-scroll-offset="100">Lorem ipsum <br/>dolor sit amet</h2>
+                            <h2 class="display video__title" data-scroll data-scroll-offset="100">A new type of <br/>real estate brokerage</h2>
                         </div>
                         <div class="col col-xs-8 col-xs-offset-3 col-md-6 col-md-offset-3 video__img-col" >
                             <img class="img-full" src="https://source.unsplash.com/XcVm8mn7NUM/1920x2160" alt="test"/>
@@ -209,7 +210,7 @@
                             </div>
                         </div>
                         <div class="col col-xs-8 col-xs-offset-3 col-lg-2 col-lg-offset-1" data-scroll data-scroll-speed="2">
-                            <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                            <p>The fight against homelessness in our city is real, and we're committed to help.</p>
                         </div>
                     </div>
                 </div>
@@ -229,12 +230,13 @@
                     <div class="container">
                         <div class="row">
                             <div class="col col-xs-12 col-md-8 col-md-offset-2" data-scroll data-scroll-speed="-1">
-                                <h2 class="display text-center" data-scroll data-scroll-offset="200">Eu facilisis sed odio morbi quis commodo odio aenean</h2>
+                                <h2 class="display text-center" data-scroll data-scroll-offset="200">Make an impact with Bolst: in your life, in your career, in your community.</h2>
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
+            <!--
             <section id="section5" data-scroll-section class="section section--info section--full section--tan">
                 <div class="container">
                     <div class="row center-xs">
@@ -270,7 +272,39 @@
                     
                 </div>
             </section>
-       
+        -->
+        <a href="#modalForm" id="modalLink" class="modal-link" style="display: none;">Email Modal Trigger</a>
+        <div id="modalForm" class="box" style="display:none;">
+            <div class="text-center">
+                <h2 class="title text-center">
+                    Six questions <br/>to ask your broker
+                </h2>
+                <p>These questions can change your business and life.</p>
+            </div>
+            <div class="is-hidden" id="newsletterMessage"></div>
+            <form class="form" id="newsletterForm" action="https://formspree.io/f/meqvrwap" method="POST">
+                <div class="form-group">
+                    <div class="form-control form-control--input form-control--full form-control--float is-focused">
+                        <input type="text" id="newsletterName" name="name" required="required" placeholder="Your name" class="">
+                        <label class="form-label required" for="contact_name">Your name</label>
+                    </div>
+                </div>
+                <!--<div class="form-group">
+                    <div class="form-control form-control--input form-control--full form-control--float is-focused">
+                        <input type="tel" id="contact_phone" name="contact[phone]" required="required" placeholder="Your phone" class="">
+                        <label class="form-label required" for="contact_phone">Phone</label>
+                    </div>
+                </div>-->
+                <div class="form-group" >
+                    <div class="form-control form-control--input form-control--full form-control--float is-focused">
+                        <input type="email" id="newsletterEmail" name="email" required="required" placeholder="Your email address" class="">
+                        <label class="form-label required" for="contact_phone">Email Address</label>
+                    </div>
+                </div>
+                <input id="newsletterGotcha" class="hidden" type="text" name="_gotcha" style="display:none" />
+                <button id="newsletterSubmit" type="submit" class="button button--arrow">Sign up to download now</button>
+            </form>
+        </div>
         <footer data-scroll-section data-scroll-sticky class="footer section section--no-overflow">
             <div class="container">
                 <div class="row center-xs">
@@ -337,6 +371,7 @@
   src="https://code.jquery.com/jquery-3.6.0.min.js"
   integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
   crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/js-cookie@3.0.0/dist/js.cookie.min.js"></script>
   <script src="js/modaal.min.js"></script>
   <script src="js/locomotive.min.js"></script>
   <script src="js/main.js"></script>
