@@ -19,7 +19,7 @@ var del = require('del');
 //});
 
 gulp.task('pack-js', function () {  
-  return gulp.src(['js/**/*.js'])
+  return gulp.src(['js/locomotive.min.js', 'js/modaal.min.js', 'js/main.js'])
     .pipe(concat('bundle.min.js'))
     .pipe(minify({
         ext:{
