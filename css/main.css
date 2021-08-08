@@ -1339,18 +1339,22 @@ img.background__content {
     display: none !important;
 }
 
-.button-group {
-    display: flex;
-    align-items: center;
+@media only screen and (min-width: 29em) {
+    .button-group {
+        display: flex;
+        align-items: center;
+    }
+
+    .button-group a {
+        margin-left: auto; 
+    }
 }
 
 .button-group button {
 
 }
 
-.button-group a {
-    margin-left: auto; 
-}
+
 
 .link {
     color: var(--dark);
