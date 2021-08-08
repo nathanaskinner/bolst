@@ -784,6 +784,7 @@ img.background__content {
 }
 
 .angled-button {
+    display: inline-block;
     position: fixed;
     bottom: 2rem; 
     right: 2rem;
@@ -791,6 +792,7 @@ img.background__content {
     min-width: 240px;
     min-height: 60px;
     text-align: center;
+    transition: all .25s ease-in-out;
 }
 
 .angled-button--mobile {
@@ -810,6 +812,24 @@ img.background__content {
 
 .angled-button--desktop {
     display: none;
+}
+
+.angled-button .angled-button__btn,
+.angled-button .cls-1 {
+    transition: all .25s ease-in-out;
+
+}
+
+.angled-button:hover .angled-button__btn,
+.angled-button:focus .angled-button__btn
+{
+    color: var(--white);
+}
+
+.angled-button:hover .cls-1,
+.angled-button:focus .cls-1
+ {
+    fill: #000;
 }
 
 @media (min-width: 768px) {
@@ -872,6 +892,7 @@ img.background__content {
     -webkit-box-pack: center; 
         -ms-flex-pack: center; 
             justify-content: center;
+            margin-right: 24px;
 }
 
 .button--arrow:after {
@@ -1316,4 +1337,29 @@ img.background__content {
 
 .is-hidden {
     display: none !important;
+}
+
+.button-group {
+    display: flex;
+    align-items: center;
+}
+
+.button-group button {
+
+}
+
+.button-group a {
+    margin-left: auto; 
+}
+
+.link {
+    color: var(--dark);
+    transition: all .25s ease;
+}
+
+.link:hover,
+.link:focus, 
+.link:active,
+.link.visited {
+    color: var(--black);
 }

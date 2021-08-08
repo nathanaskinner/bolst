@@ -80,12 +80,16 @@ var static = true;
     $('#modalLink').modaal({
         custom_class: 'newsletter'
     });
-    if(!Cookies.get('formSignedUp')){
+    if(!Cookies.get('formSignedUp') || !Cookies.get('formNoThanks')){
         setTimeout(function() { 
             $('#modalLink').modaal('open');
         }, 6000);
     }
-    
+    $('#noThanks').click(function(e){
+        e.preventDefault();
+        $('#modalLink').modaal('close');
+        Cookies.set('formNoThanks', true);
+    });
 });
 
 $( document ).ready(function() {
