@@ -193,8 +193,14 @@ h3, .h3 {
 }
 
 .display {
-    font-size: var(--fluid-5);
-    letter-spacing: -2px;
+    font-size: var(--fluid-3);
+}
+
+@media only screen and (min-width: 48em) {
+    .display {
+        font-size: var(--fluid-5);
+        letter-spacing: -2px;
+    }
 }
 
 .timmons {
