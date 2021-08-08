@@ -1362,12 +1362,13 @@ img.background__content {
     .button-group a {
         margin-left: auto; 
         margin-top: 0;
+        display: inline-block;
     }
 }
 
 .button-group a  {
  margin-top: 1rem; 
- display: inline-block;
+ display: block;
 }
 
 
