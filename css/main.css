@@ -1361,11 +1361,13 @@ img.background__content {
 
     .button-group a {
         margin-left: auto; 
+        margin-top: 0;
     }
 }
 
-.button-group button {
-
+.button-group a  {
+ margin-top: 1rem; 
+ display: inline-block;
 }
 
 
