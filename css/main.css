@@ -998,10 +998,18 @@ img.background__content {
     background-color: var(--sand);
 }
 
+.newsletter .modaal-content-container {
+    padding: 1.25rem
+}
+
 @media only screen and (min-width: 64em) {
 
     .section--rl, .section--lr {
         padding-top: 3rem;
+    }
+
+    .newsletter .modaal-content-container {
+        padding: 1.5rem
     }
     
 }
