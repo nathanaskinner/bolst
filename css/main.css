@@ -1353,7 +1353,7 @@ img.background__content {
     display: none !important;
 }
 
-@media only screen and (min-width: 29em) {
+@media only screen and (min-width: 32em) {
     .button-group {
         display: flex;
         align-items: center;
