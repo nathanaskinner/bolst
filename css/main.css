@@ -640,6 +640,7 @@ img.background__content {
 
 .form-control--full input {
     width: 100%;
+    border-radius: 0;
 }
 
 .form-control--input input, .form-control--select select, .form-control--textarea textarea {
