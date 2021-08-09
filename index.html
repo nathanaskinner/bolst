@@ -15,7 +15,7 @@
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
     <link rel="manifest" href="site.webmanifest">
-    <link rel="stylesheet" href="css/stylesheet-f3f2c2e96e.min.css">
+    <link rel="stylesheet" href="css/stylesheet-acfd307b82.min.css">
 </head>
 <body>
     <div class="page-wrapper data-scroll-container" id="jsScroll">
@@ -102,7 +102,7 @@
                         <div class="col col-xs-12 col-sm-6 p-0" data-scroll data-scroll-speed="2" data-scroll-delay="0.2">
                             <figure class="fig">
                                 <img class="fig__img" src="https://source.unsplash.com/HmbLYd8-62I/600x500" alt="test"/>
-                                <figcaption class="fig__caption">The Anderson's <br/> Atlanta, GA </figcaption>
+                                <!--<figcaption class="fig__caption">The Anderson's <br/> Atlanta, GA </figcaption>-->
                             </figure>
                         </div>
                         <div class="col col-xs-12 col-sm-6"  data-scroll data-scroll-speed="-2" data-scroll-delay="0.6">
@@ -186,7 +186,7 @@
                         <div class="col col-xs-12 col-sm-6 p-0 left"  data-scroll data-scroll-speed="2" data-scroll-delay="0.2">
                             <figure class="fig" >
                                 <img class="fig__img" src="https://source.unsplash.com/Wr3comVZJxU/600x500" alt="test"/>
-                                <figcaption class="fig__caption">The Dumlao's <br/> Marietta, GA </figcaption>
+                                <!--<figcaption class="fig__caption">The Dumlao's <br/> Marietta, GA </figcaption>-->
                             </figure>
                         </div>
                         <div class="col col-xs-12 col-sm-6 right" data-scroll data-scroll-speed="-2" data-scroll-delay="0.6">
@@ -209,7 +209,7 @@
                         <div class="col col-xs-8 col-xs-offset-3 col-md-6 col-md-offset-3 video__img-col" >
                             <img class="img-full" src="https://source.unsplash.com/XcVm8mn7NUM/1920x2160" alt="test"/>
                             <div class="video__btn">
-                                <a class="button button--outline button--square button--xl button--video" href="https://player.vimeo.com/video/584701079" role="button">
+                                <a class="button button--outline button--square button--xl button--video" href="https://player.vimeo.com/video/584701079?autoplay=1" role="button">
                                    
                                     <span class="button__content">
                                         <span class="visually-hidden">play video</span>
@@ -224,7 +224,7 @@
                     </div>
                 </div>
             </section>
-            <section data-scroll-section class="section section--banner section--xl section--background">
+            <!--<section data-scroll-section class="section section--banner section--xl section--background">
                 <div class="background">
                     <div class="background__ratio background__ratio--banner"></div>
                     <picture class="background__obj">
@@ -244,44 +244,46 @@
                         </div>
                     </div>
                 </div>
-            </section>
-            <!--
+            </section>-->
             <section id="section5" data-scroll-section class="section section--info section--full section--tan">
                 <div class="container">
                     <div class="row center-xs">
                         <div class="col col-xs-12 col-sm-8 col-md-8 col-lg-7" id="infoHeader">
                             <div class="box">
-                                <h2 class="title text-center">
-                                    Request <span>More</span> Information
-                                </h2>
-                                <form class="form">
+                                <div class="text-center">
+                                    <h2 class="title text-center">
+                                        Six questions to <br/>ask your broker
+                                    </h2>
+                                    <p>These questions can change your business and life.</p>
+                                </div>
+                                <div class="is-hidden" id="infoMessage"></div>
+                                <form class="form" id="infoForm" action="https://formspree.io/f/meqvrbek" method="POST">
                                     <div class="form-group">
                                         <div class="form-control form-control--input form-control--full form-control--float is-focused">
-                                            <input type="text" id="contact_name" name="contact[name]" required="required" placeholder="Your name" class="">
+                                            <input type="text" id="infoName" name="name" required="required" placeholder="Your name" class="">
                                             <label class="form-label required" for="contact_name">Your name</label>
                                         </div>
                                     </div>
-                                    <div class="form-group">
+                                    <!--<div class="form-group">
                                         <div class="form-control form-control--input form-control--full form-control--float is-focused">
                                             <input type="tel" id="contact_phone" name="contact[phone]" required="required" placeholder="Your phone" class="">
                                             <label class="form-label required" for="contact_phone">Phone</label>
                                         </div>
-                                    </div>
+                                    </div>-->
                                     <div class="form-group">
                                         <div class="form-control form-control--input form-control--full form-control--float is-focused">
-                                            <input type="email" id="contact_email" name="contact[email]" required="required" placeholder="Your email address" class="">
+                                            <input type="email" id="infoEmail" name="email" required="required" placeholder="Your email address" class="">
                                             <label class="form-label required" for="contact_phone">Email Address</label>
                                         </div>
                                     </div>
-                                    <button type="submit" class="button button--arrow">Get More Info</button>
+                                    <input id="infoGotcha" class="hidden" type="text" name="_gotcha" style="display:none" />
+                                    <button id="infoSubmit" type="submit" class="button button--arrow">Sign up to download now</button>
                                 </form>
                             </div>
                         </div>
                     </div>
-                    
                 </div>
             </section>
-        -->
         <a href="#modalForm" id="modalLink" class="modal-link" style="display: none;">Email Modal Trigger</a>
         <div id="modalForm" class="box" style="display:none;">
             <div class="text-center">
@@ -362,12 +364,37 @@
                                 </svg>
                             </a>
                             <a href="tel:+14044822293" class="footer__tel h3 mt-5">404.482.2293</a>
-                            <p class="footer__text text-small text-upper u-mt-md">Atlanta, GA</p>
+                            <div class="footer__text ">
+                            <p class="text-small text-upper u-mt-md">Atlanta, GA</p>
+                            <p class="u-mt-md">Interested in learning more about Bolst? Email us at <a href="mailto:hello@bolst.homes?subject=I'd like to learn more about Bolst">hello@bolst.homes</a></p>
+                            </div>
                             <a href="/" 
                                 class="footer__link text-upper text-small mt-4"
                                 aria-label="bolst.homes"
                             >
                                 bolst.homes
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="row row--center mt-5">
+                    <div class="col col-xs-12 col-sm-6 col-lg-4">
+                        <div class="group group--none group--center">
+                            <a class="button button--outline button--square button--xl button--video mx-2" href="https://www.instagram.com/bolstrealestate/" target="_blank">
+                                <span class="button__content">
+                                    <span class="visually-hidden">Bolst Instagram</span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px">
+                                        <path d="M7.8,2H16.2C19.4,2 22,4.6 22,7.8V16.2A5.8,5.8 0 0,1 16.2,22H7.8C4.6,22 2,19.4 2,16.2V7.8A5.8,5.8 0 0,1 7.8,2M7.6,4A3.6,3.6 0 0,0 4,7.6V16.4C4,18.39 5.61,20 7.6,20H16.4A3.6,3.6 0 0,0 20,16.4V7.6C20,5.61 18.39,4 16.4,4H7.6M17.25,5.5A1.25,1.25 0 0,1 18.5,6.75A1.25,1.25 0 0,1 17.25,8A1.25,1.25 0 0,1 16,6.75A1.25,1.25 0 0,1 17.25,5.5M12,7A5,5 0 0,1 17,12A5,5 0 0,1 12,17A5,5 0 0,1 7,12A5,5 0 0,1 12,7M12,9A3,3 0 0,0 9,12A3,3 0 0,0 12,15A3,3 0 0,0 15,12A3,3 0 0,0 12,9Z" />
+                                    </svg>
+                                </span>
+                            </a>
+                            <a class="button button--outline button--square button--xl button--video mx-2" href="https://www.facebook.com/profile.php?id=100070615006173" target="_blank">
+                                <span class="button__content">
+                                    <span class="visually-hidden">Bolst Facebook</span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px">
+                                        <path d="M12 2.04C6.5 2.04 2 6.53 2 12.06C2 17.06 5.66 21.21 10.44 21.96V14.96H7.9V12.06H10.44V9.85C10.44 7.34 11.93 5.96 14.22 5.96C15.31 5.96 16.45 6.15 16.45 6.15V8.62H15.19C13.95 8.62 13.56 9.39 13.56 10.18V12.06H16.34L15.89 14.96H13.56V21.96A10 10 0 0 0 22 12.06C22 6.53 17.5 2.04 12 2.04Z" />
+                                    </svg>
+                                </span>
                             </a>
                         </div>
                     </div>
@@ -386,7 +413,7 @@
   integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
   crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/js-cookie@3.0.0/dist/js.cookie.min.js"></script>
-  <script src="js/bundle-7fd0cf397a.min.js"></script>
+  <script src="js/bundle-c6094ea834.min.js"></script>
 </body>
 
 </html>
