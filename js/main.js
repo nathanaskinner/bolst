@@ -93,7 +93,7 @@ var static = true;
     $('#noThanks').click(function(e){
         e.preventDefault();
         $('#modalLink').modaal('close');
-        Cookies.set('formNoThanks', true);
+        Cookies.set('formNoThanks', true, { expires: 60 });
     });
 });
 
@@ -166,7 +166,7 @@ $( document ).ready(function() {
                         message.removeClass('is-hidden');
                         message.append('<div class="text-center text-large">Thank you for signing up!</div>');
                     }, 3000);
-                    Cookies.set('formSignedUp', true);
+                    Cookies.set('formSignedUp', true, { expires: 60 });
                 },
                 error: function(err) {
                     message.removeClass('is-hidden');
