@@ -80,7 +80,12 @@ var static = true;
     $('#modalLink').modaal({
         custom_class: 'newsletter'
     });
-    if(!Cookies.get('formSignedUp') || !Cookies.get('formNoThanks')){
+    if(!Cookies.get('formSignedUp')){
+        setTimeout(function() { 
+            $('#modalLink').modaal('open');
+        }, 6000);
+    }
+    if(!Cookies.get('formNoThanks')){
         setTimeout(function() { 
             $('#modalLink').modaal('open');
         }, 6000);
