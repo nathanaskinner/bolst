@@ -1483,3 +1483,17 @@ img.background__content {
     margin-top: .5rem;
     margin-left: .5rem;
 }
+
+.d-block {
+    display: block;
+}
+
+footer .clean-link {
+    color: var(--white); 
+    text-decoration: none;
+}
+
+.d-flexInline {
+    display: inline-flex;
+    align-items: center;
+}
